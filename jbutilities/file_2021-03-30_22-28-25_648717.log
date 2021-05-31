@@ -1,0 +1,14 @@
+2021-03-30 22:28:25.655 | INFO     | jbutilscli.cli:watchcomo:102 - Como watchdog starting...
+2021-03-30 22:28:25.659 | INFO     | jbutilscli.utils24.comowatch:__init__:16 - Initializing watchdog
+2021-03-30 22:28:25.663 | INFO     | jbutilscli.utils24.comowatch:__init__:34 - Initializing watchdog complete
+2021-03-30 22:28:25.669 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\file_2021-03-30_22-19-56_767823.log has been created!
+2021-03-30 22:28:25.676 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\file_2021-03-30_22-22-12_940608.log has been created!
+2021-03-30 22:28:25.680 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\file_2021-03-30_22-27-20_512418.log has been created!
+2021-03-30 22:28:25.684 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\file_2021-03-30_22-27-55_562446.log has been created!
+2021-03-30 22:28:25.687 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\file_2021-03-30_22-28-25_648717.log has been created!
+2021-03-30 22:28:25.691 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\jButilsCLI has been created!
+2021-03-30 22:28:25.695 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\tmp.log has been created!
+2021-03-30 22:28:25.702 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\tSA1 - Copy.txt has been created!
+2021-03-30 22:28:25.706 | DEBUG    | jbutilscli.utils24.comowatch:on_created:38 - hey, .\tSA1.txt has been created!
+2021-03-30 22:28:26.040 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:44 - hey buddy, .\file_2021-03-30_22-28-25_648717.log has been modified
+2021-03-30 22:28:26.351 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:44 - hey buddy, .\file_2021-03-30_22-28-25_648717.log has been modified

@@ -10,3 +10,7 @@ setuptools
 Sphinx
 tox
 twine
+watchdog
+simple-settings
+loguru
+pytz

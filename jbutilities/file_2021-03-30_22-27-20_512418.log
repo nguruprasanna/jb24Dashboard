@@ -1,0 +1,4 @@
+2021-03-30 22:27:20.521 | INFO     | jbutilscli.cli:watchcomo:102 - Como watchdog starting...
+2021-03-30 22:27:20.525 | INFO     | jbutilscli.utils24.comowatch:__init__:15 - Initializing watchdog
+2021-03-30 22:27:20.529 | INFO     | jbutilscli.utils24.comowatch:__init__:33 - Initializing watchdog complete
+2021-03-30 22:27:20.862 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:43 - hey buddy, .\file_2021-03-30_22-27-20_512418.log has been modified

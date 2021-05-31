@@ -1,0 +1,9 @@
+2021-03-30 22:19:56.775 | INFO     | jbutilscli.cli:watchcomo:102 - Como watchdog starting...
+2021-03-30 22:19:56.785 | INFO     | jbutilscli.utils24.comowatch:__init__:15 - Initializing watchdog
+2021-03-30 22:19:56.792 | INFO     | jbutilscli.utils24.comowatch:__init__:33 - Initializing watchdog complete
+2021-03-30 22:19:57.137 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:43 - hey buddy, .\file_2021-03-30_22-19-56_767823.log has been modified
+2021-03-30 22:21:30.613 | DEBUG    | jbutilscli.utils24.comowatch:on_created:37 - hey, .\New Text Document.txt has been created!
+2021-03-30 22:21:38.816 | DEBUG    | jbutilscli.utils24.comowatch:on_moved:46 - ok ok ok, someone moved .\New Text Document.txt to .\tSA1.txt
+2021-03-30 22:21:49.201 | DEBUG    | jbutilscli.utils24.comowatch:on_created:37 - hey, .\tSA1 - Copy.txt has been created!
+2021-03-30 22:21:49.219 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:43 - hey buddy, .\tSA1 - Copy.txt has been modified
+2021-03-30 22:22:00.852 | DEBUG    | jbutilscli.utils24.comowatch:on_modified:43 - hey buddy, .\tSA1.txt has been modified

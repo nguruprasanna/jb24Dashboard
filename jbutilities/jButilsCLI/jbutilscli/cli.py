@@ -18,9 +18,14 @@ It can be used as a handy facility for running the task from a command line.
 .. currentmodule:: jbutilscli.cli
 .. moduleauthor:: Guru Nagarajan <guru@esolve.tech>
 """
+import sys
 import logging
+from loguru import logger
 import click
 from .__init__ import __version__
+from .utils24.comowatch import watchComo
+import threading
+from cli_setting import cli_Settings
 
 LOGGING_LEVELS = {
     0: logging.NOTSET,
@@ -30,6 +35,12 @@ LOGGING_LEVELS = {
     4: logging.DEBUG,
 }  #: a mapping of `verbose` option counts to logging levels
 
+file_handler = logging.FileHandler(filename='tmp.log')
+stdout_handler = logging.StreamHandler(sys.stdout)
+handlers = [file_handler, stdout_handler]
+cli_settings=cli_Settings()
+clisettings=cli_settings.get_settings()
+print(f"settings {clisettings}")
 
 class Info(object):
     """An information object to pass data between CLI functions."""
@@ -46,18 +57,22 @@ pass_info = click.make_pass_decorator(Info, ensure=True)
 
 # Change the options to below to suit the actual options for your task (or
 # tasks).
+#filename="tmp.log",
 @click.group()
 @click.option("--verbose", "-v", count=True, help="Enable verbose output.")
 @pass_info
 def cli(info: Info, verbose: int):
     """Run jbutilscli."""
     # Use the verbosity count to determine the logging level...
+ 
     if verbose > 0:
-        logging.basicConfig(
+        """    logging.basicConfig(
+            stream=sys.stdout,
             level=LOGGING_LEVELS[verbose]
             if verbose in LOGGING_LEVELS
             else logging.DEBUG
-        )
+        ) """
+        logger.add("file_{time}.log", rotation="500 MB")
         click.echo(
             click.style(
                 f"Verbose logging is enabled. "
@@ -65,7 +80,10 @@ def cli(info: Info, verbose: int):
                 fg="yellow",
             )
         )
+    
     info.verbose = verbose
+
+ 
 
 
 @cli.command()
@@ -79,3 +97,25 @@ def hello(_: Info):
 def version():
     """Get the library version."""
     click.echo(click.style(f"{__version__}", bold=True))
+
+@cli.command()
+def watchcomo():
+    """Watch como and send to Loki"""
+    #logger.debug(f"settings { settings }")
+    click.echo(click.style(f"{__version__}", bold=True))
+    logger.info("Como watchdog starting...")
+    wcomo = watchComo()
+    wcomo.startwatch()
+
+    # thread = threading.Thread(target=wcomo.startwatch(), daemon=True)
+    # thread.start()
+    # """     test_file = 'SomeTestFile'
+    # test_file.unlink()
+    # with test_file.open('w') as f:
+    #     f.write('Test')
+    # print("Oh shit") """
+
+    # thread.join()
+
+
+     
