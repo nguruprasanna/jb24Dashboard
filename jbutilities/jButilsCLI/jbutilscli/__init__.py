@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+###!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -10,7 +10,9 @@ client for jbutils
 
 from .version import __version__, __release__  # noqa
 import os
+import sys
   
+print(sys.path)
 from simple_settings import LazySettings
 
 """ if 'SIMPLE_SETTINGS' in os.environ:
@@ -18,6 +20,7 @@ from simple_settings import LazySettings
 else:
     os.environ['SIMPLE_SETTINGS']= __file__ + "/settings"
  """
+
 from simple_settings import settings
 rpath =  os.path.dirname(__file__)
 rpath_parent = os.path.abspath(os.path.join(rpath, os.pardir))
